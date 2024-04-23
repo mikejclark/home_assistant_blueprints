@@ -2,7 +2,7 @@ blueprint:
   name: Water plants
   description: Warning to water and fertilize plants
   domain: automation
-  author: Peter Andersson
+  author: Mike Clark
   input:
     time:
       name: Time to test on
