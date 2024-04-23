@@ -52,6 +52,6 @@ action:
     title: 🌱
     message: >-
       {% for plant in states.plant | selectattr('attributes.moisture_status', 'match', 'Low') | rejectattr('entity_id', 'in', exclude) %}
-        {{- plant.name }} 💧{% if 'Low' in plant.attributes.conductivity_status %}💩{% endif -%} {% if not loop.last %}, {% endif -%}
+        {{- plant.name }} 💧{% if 'Low' in plant.attributes.conductivity_status %}{% endif -%} {% if not loop.last %}, {% endif -%}
       {% endfor %}
 mode: single
